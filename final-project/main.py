@@ -1,6 +1,7 @@
 import webapp2
 import jinja2
 from event import Event
+from user import User
 import datetime
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
@@ -29,6 +30,7 @@ class CreateUserHandler(webapp2.RequestHandler):
             real_name=self.request.get('real_name'),
             screen_name=self.request.get('screen_name'),
             user_email=self.request.get('user_email'),
+            user_password=self.request.get('user_password'),
         )
 
 app = webapp2.WSGIApplication([
