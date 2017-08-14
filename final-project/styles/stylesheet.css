@@ -1,11 +1,27 @@
-article.note .timestamp {
-  display: block;
-  font-weight: bold;
+article.event {
+  display: inline-block;
+  position: relative;
   font-size: 90%;
+  border: 1px solid black;
+  padding: 10px;
 }
 
-article.note .content {
-  display: block;
-  font-style: bold;
-  margin-bottom: 25px;
+span.event_name {
+  font-weight: bold;
+}
+
+span.event_category {
+  
+}
+
+span.event_location {
+
+}
+
+span.event_date {
+
+}
+
+span.event_description {
+
 }
