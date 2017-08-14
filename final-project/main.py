@@ -1,7 +1,6 @@
 import webapp2
 import jinja2
-from event import Event
-from user import User
+from models import Event, User 
 from datetime import date
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
@@ -46,8 +45,16 @@ class CreateUserHandler(webapp2.RequestHandler):
         key = user.put()
         self.response.write(user_created_template.render(template_variables))
 
+class EventsFeedHandler(webapp2.RequestHandler):
+    def get(self):
+        events_feed_template = env.get_template('events_feed.html')
+        self.response.write(events_feed_template.render())
+
+
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/create_event', CreateEventHandler),
     ('/create_user', CreateUserHandler),
+    ('/events_feed', EventsFeedHandler),
 ], debug=True)
