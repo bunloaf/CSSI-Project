@@ -22,7 +22,7 @@ class CreateEventHandler(webapp2.RequestHandler):
                 int(self.request.get('event_day'))),
             event_description=self.request.get('event_description'),
             event_category=self.request.get('event_category'))
-        self.response.write('You created the event: ' + event.name)
+        self.response.write('You created the event: ' + event.event_name)
 
 class CreateUserHandler(webapp2.RequestHandler):
     def get(self):
@@ -32,6 +32,7 @@ class CreateUserHandler(webapp2.RequestHandler):
             user_email=self.request.get('user_email'),
             user_password=self.request.get('user_password'),
         )
+    self.response.write('You created the profile: ' + user.real_name)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
