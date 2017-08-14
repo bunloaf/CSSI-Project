@@ -27,7 +27,7 @@ class CreateEventHandler(webapp2.RequestHandler):
                 int(self.request.get('event_month')),
                 int(self.request.get('event_day'))),
             event_description=self.request.get('event_description'),
-            event_category=self.request.get('event_category')
+            event_category=self.request.get('event_category'),
         )
         key = event.put()
         self.response.write(event_created_template.render(template_variables))
@@ -44,7 +44,7 @@ class CreateUserHandler(webapp2.RequestHandler):
             real_name=self.request.get('real_name'),
             screen_name=self.request.get('screen_name'),
             user_email=self.request.get('user_email'),
-            user_password=self.request.get('user_password')
+            user_password=self.request.get('user_password'),
         )
         key = user.put()
         self.response.write(user_created_template.render(template_variables))
