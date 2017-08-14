@@ -3,9 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Create an Event</title>
+    <link rel='stylesheet' href='/styles/stylesheet.css'>
   </head>
   <body>
-    <form>
+
+    <form id='create_event' action='/create_event' method='post'>
+      <input type='text' name='event_name' value='event_name'>
+      <input type='text' name='event_location' value='event_location'>
+      <input type='datetime-local' name='event_date' value='event_date'>
+      <input type='text' name='event_category' value='event_category'>
+      <textarea form="form_id" type='textarea' name='event_description'
+      value='event_description'></textarea>
+      <input type='submit' value='Submit'>
     </form>
+
   </body>
 </html>
