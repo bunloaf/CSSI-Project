@@ -1,0 +1,11 @@
+article.note .timestamp {
+  display: block;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+article.note .content {
+  display: block;
+  font-style: bold;
+  margin-bottom: 25px;
+}

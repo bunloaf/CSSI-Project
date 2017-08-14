@@ -47,9 +47,10 @@ class CreateUserHandler(webapp2.RequestHandler):
 
 class EventsFeedHandler(webapp2.RequestHandler):
     def get(self):
+        events = Event.query().fetch(limit=20)
         events_feed_template = env.get_template('events_feed.html')
-        self.response.write(events_feed_template.render())
-        
+        self.response.write(events_feed_template.render({ 'events': events }))
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/create_event', CreateEventHandler),

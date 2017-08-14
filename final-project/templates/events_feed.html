@@ -8,6 +8,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
   <body>
-test
+    <h1>Events</h1>
+    {% for event in events %}
+    <article class='event'>
+      <span class='event_name'>{{ event.event_name }}</span>
+      <span class='event_location'>{{ event.event_location }}</span>
+      <span class='event_date'>{{ event.event_date }}</span>
+      <span class='event_description'>{{ event.event_description }}</span>
+      <span class='event_category'>{{ event.event_category }}</span>
+    </article>
+    {% endfor %}
+
   </body>
 </html>
