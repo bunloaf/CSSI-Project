@@ -2,7 +2,7 @@ import webapp2
 import jinja2
 from event import Event
 from user import User
-import datetime
+from datetime import date
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 
@@ -22,10 +22,7 @@ class CreateEventHandler(webapp2.RequestHandler):
         event = Event(
             event_name=self.request.get('event_name'),
             event_location=self.request.get('event_location'),
-            event_date=datetime.date(
-                int(self.request.get('event_year')),
-                int(self.request.get('event_month')),
-                int(self.request.get('event_day'))),
+            event_date=self.request.get('event_date'),
             event_description=self.request.get('event_description'),
             event_category=self.request.get('event_category'),
         )
