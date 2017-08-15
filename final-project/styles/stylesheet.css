@@ -7,11 +7,13 @@ article.event {
 }
 
 span.event_name {
+  text-align: left;
   font-weight: bold;
+  font-size: 30px;
 }
 
 span.event_category {
-  
+  font-style: italic;
 }
 
 span.event_location {
