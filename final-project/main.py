@@ -44,28 +44,12 @@ class ProfileHandler(webapp2.RequestHandler):
     def get(self):
         profile_template = env.get_template('profile.html')
         self.response.write(profile_template.render())
-class CreateUserHandler(webapp2.RequestHandler):
-    def get(self):
-        create_user_template = env.get_template('create_user.html')
-        self.response.write(create_user_template.render())
-
-    def post(self):
-        user_created_template = env.get_template('user_created.html')
-        template_variables= {'real_name': self.request.get('real_name')}
-        user = User(
-            real_name=self.request.get('real_name'),
-            screen_name=self.request.get('screen_name'),
-            user_email=self.request.get('user_email'),
-            user_password=self.request.get('user_password'),
-        )
-        key = user.put()
-        self.response.write(user_created_template.render(template_variables))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/about', AboutHandler),
     ('/events', EventsHandler),
     ('/submit_event', SubmitEventHandler),
-    ('/profile', ProfileHandler)
+    ('/profile', ProfileHandler),
     ('/create_user', CreateUserHandler),
 ], debug=True)
