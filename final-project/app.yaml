@@ -10,6 +10,12 @@ handlers:
   upload: favicon\.ico
 - url: /styles
   static_dir: styles
+- url: /submit_event
+  script: main.app
+  login: required
+- url: /profile
+  script: main.app
+  login: required
 - url: .*
   script: main.app
   login: required

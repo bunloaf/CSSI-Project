@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events Feed</title>
+    <link rel='stylesheet' href='/styles/stylesheet.css'/>
+</script>
+
+</head>
+  <body>
+
+    <nav>
+      <ul>
+        <li><a href='/'>Home</a>
+        <li><a href='/about'>About</a>
+        <li><a href='/events'>Events</a>
+        <li><a href='/submit_event'>Submit Event</a>
+        <li><a href='/profile'>Profile</a>
+      </ul>
+
+<h1>Events</h1>
+
+<div class='event_block'>
+    {% for event in events %}
+    <article class='event'>
+      <span class='event_name'>{{ event.event_name }}</span>
+      <span class='event_category'>{{ event.event_category }}</span>
+      </br>
+      <span class='event_date'>{{ event.event_date }}</span>
+      </br>
+      <span class='event_location'>{{ event.event_location }}</span>
+      </br>
+      <span class='event_description'>{{ event.event_description }}</span>
+    </article>
+    {% endfor %}
+</div>
+
+  </body>
+</html>

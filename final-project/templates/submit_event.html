@@ -4,19 +4,25 @@
     <meta charset="utf-8">
     <title>Create an Event</title>
     <link rel='stylesheet' href='/styles/stylesheet.css'/>
-    <script src='/scripts/scripts.js'></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><a href='/'>Home</a>
+        <li><a href='/about'>About</a>
+        <li><a href='/events'>Events</a>
+        <li><a href='/submit_event'>Submit Event</a>
+        <li><a href='/profile'>Profile</a>
+      </ul>
 
-  <form id='create_event' action='/create_event' method='post'/>
+  <form id='submit_event' action='/submit_event' method='post'/>
     <input type='text' name='event_name' value='event_name'/>
     <input type='text' name='event_location' value='event_location'/>
     <input type='datetime-local' name='event_date' value='event_date'/>
     <input type='text' name='event_category' value='event_category'/>
-    <textarea form="form_id" type='textarea' name='event_description'
-    value='event_description' rows="10" cols='30' maxlength="150"/></textarea>
+    <textarea type='textarea' name='event_description'
+    value='event_description' rows="30" cols='30' maxlength="150"/></textarea>
     <input type='submit' value='Submit'/>
   </form>
 

@@ -1,13 +1,44 @@
-article.note .timestamp {
-  display: block;
-  font-weight: bold;
+article.event {
+  display: inline-block;
+  position: relative;
   font-size: 90%;
+  border: 1px solid black;
+  padding: 10px;
 }
 
-article.note .content {
-  display: block;
-  font-style: bold;
-  margin-bottom: 25px;
+span.event_name {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+span.event_category {
+  font-style: italic;
+}
+
+span.event_location {
+
+}
+
+span.event_date {
+
+}
+
+span.event_description {
+
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline;
+  list-style: none;
 }
 
 span.button {
