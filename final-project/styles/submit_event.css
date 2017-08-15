@@ -1,0 +1,36 @@
+body {
+  background-color: #595657;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline;
+  list-style: none;
+}
+
+#submit_event {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid black;
+  width: 500px;
+  padding: 10px;
+  margin: 5px;
+  background-color: gray;
+}
+
+#meta_details {
+  display: inline-block;
+  position: relative;
+}
+
+#specific_details {
+  display: inline-block;
+  position: relative;
+}
