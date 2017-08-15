@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Create an Event</title>
-    <link rel='stylesheet' href='/styles/stylesheet.css'/>
+    <link rel='stylesheet' href='/styles/submit_event.css'/>
   </head>
 
   <body>
@@ -16,15 +16,32 @@
         <li><a href='/profile'>Profile</a>
       </ul>
 
+<div>
   <form id='submit_event' action='/submit_event' method='post'/>
-    <input type='text' name='event_name' value='event_name'/>
-    <input type='text' name='event_location' value='event_location'/>
-    <input type='datetime-local' name='event_date' value='event_date'/>
-    <input type='text' name='event_category' value='event_category'/>
-    <textarea type='textarea' name='event_description'
-    value='event_description' rows="30" cols='30' maxlength="150"/></textarea>
-    <input type='submit' value='Submit'/>
+    <h1>Submit an Event</h1>
+
+    <div id='meta_details'>
+      <input id='event_name' class='event_input' type='text'
+        name='event_name' value='event_name' maxlength='30'/>
+      </br>
+      <input id='event_location' class='event_input' type='text'
+        name='event_location' value='event_location' maxlength='50'/>
+      </br>
+      <input id='event_date' class='event_input' type='datetime-local'
+        name='event_date' value='event_date'/>
+      </br>
+      <input id='event_category' class='event_input' type='text'
+        name='event_category' value='event_category' maxlength='30'/>
+    </div>
+
+    <div id='specific_details'>
+      <textarea id='event_description' class='event_input' type='textarea'
+        name='event_description' value='event_description'
+        rows='10' cols='30' maxlength='500'/></textarea>
+      <input id='submit' class='event_input' type='submit' value='Submit'/>
+    </div>
   </form>
+<div>
 
   </body>
 </html>
