@@ -27,3 +27,16 @@ span.event_date {
 span.event_description {
 
 }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline;
+  list-style: none;
+}

@@ -18,14 +18,14 @@ class AboutHandler(webapp2.RequestHandler):
 class EventsHandler(webapp2.RequestHandler):
     def get(self):
         events = Event.query().fetch(limit=20)
-        events_feed_template = env.get_template('events.html')
-        self.response.write(events_feed_template.render({ 'events': events }))
+        events_template = env.get_template('events.html')
+        self.response.write(events_template.render({ 'events': events }))
 
 
 class SubmitEventHandler(webapp2.RequestHandler):
     def get(self):
-        create_event_template = env.get_template('submit_event.html')
-        self.response.write(create_event_template.render())
+        submit_event_template = env.get_template('submit_event.html')
+        self.response.write(submit_event_template.render())
 
     def post(self):
         event_created_template = env.get_template('event_created.html')
@@ -51,5 +51,5 @@ app = webapp2.WSGIApplication([
     ('/events', EventsHandler),
     ('/submit_event', SubmitEventHandler),
     ('/profile', ProfileHandler),
-    ('/create_user', CreateUserHandler),
+    ('/event_created', SubmitEventHandler)
 ], debug=True)
