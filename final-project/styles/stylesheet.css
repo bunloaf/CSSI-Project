@@ -9,3 +9,19 @@ article.note .content {
   font-style: bold;
   margin-bottom: 25px;
 }
+
+span.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 
+}
+
+span.button a {
+  color: white;
+  text-decoration: none;
+  font-family: arial
+}
+
+span.button a:hover {
+  opacity: .5
+}
