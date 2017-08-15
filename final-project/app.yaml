@@ -18,6 +18,8 @@ handlers:
   login: required
 - url: .*
   script: main.app
+- url: profile
+  script: main.app
   login: required
 
 libraries:
