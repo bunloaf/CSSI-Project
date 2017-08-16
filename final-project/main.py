@@ -48,9 +48,8 @@ class SubmitEventHandler(webapp2.RequestHandler):
 
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
-        profile_template = env.get_template('profile.html')
         user = users.get_current_user()
-        profile = Profile.query(Profile.user_id == user.user_id())
+        profile_template = env.get_template('profile.html')
         vars = {
             'name': Profile.name,
             'affiliated_group': Profile.affiliated_group,
@@ -61,6 +60,7 @@ class ProfileHandler(webapp2.RequestHandler):
         }
         self.response.write(profile_template.render())
 
+        profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
             vars = {
                 'name': Profile.name,

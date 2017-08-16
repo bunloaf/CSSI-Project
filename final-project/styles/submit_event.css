@@ -12,7 +12,7 @@ a {
 div.menus {
   display: inline-block;
   position: fixed;
-  top: 0;
+  top: 20%;
   right: 0;
   margin-left: 100%;
 }
@@ -67,4 +67,18 @@ div.profile_menu {
 #specific_details {
   display: inline-block;
   position: relative;
+}
+
+footer {
+  border-top: 1px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-style: italic;
+  text-indent: 15px;
 }
