@@ -18,7 +18,7 @@ handlers:
   login: required
 - url: .*
   script: main.app
-- url: profile
+- url: /profile
   script: main.app
   login: required
 

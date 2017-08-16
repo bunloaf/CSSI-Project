@@ -1,6 +1,6 @@
 import webapp2
 import jinja2
-from models import Event, User
+from models import Event, Profile
 from datetime import date
 from google.appengine.api import users
 
@@ -65,7 +65,42 @@ class SubmitEventHandler(webapp2.RequestHandler):
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
         profile_template = env.get_template('profile.html')
-        self.response.write(profile_template.render())
+        user = users.get_current_user()
+        profile = Profile.query(Profile.user_id == user.user_id())
+        vars = {
+            'name': Profile.name,
+            'affiliated_group': Profile.affiliated_group,
+            'interests': Profile.interests,
+            'gender': Profile.gender,
+            'orientation': Profile.orientation,
+            'pronouns': Profile.pronouns
+        }
+        if profile:
+            vars = {
+                'name': Profile.name,
+                'affiliated_group': Profile.affiliated_group,
+                'interests': Profile.interests,
+                'gender': Profile.gender,
+                'orientation': Profile.orientation,
+                'pronouns': Profile.pronouns
+            }
+        self.response.write(profile_template.render(vars))
+
+
+    def post(self):
+        user_id = users.get_current_user().user_id()
+        profile = Profile(
+            name=self.request.get('name'),
+            affiliated_group=self.request.get('affiliated_group'),
+            interests=self.request.get('interested_in'),
+            gender=self.request.get('gender'),
+            orientation=self.request.get('orientation'),
+            pronouns=self.request.get('pronouns'),
+            user_id=user_id
+        )
+        profile.put()
+        self.response.write('Thank youu')
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),

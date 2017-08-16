@@ -7,8 +7,11 @@ class Event(ndb.Model):
     event_description = ndb.StringProperty()
     event_category = ndb.StringProperty()
 
-class User(ndb.Model):
-    real_name=ndb.StringProperty()
-    screen_name=ndb.StringProperty()
-    user_email=ndb.StringProperty()
-    user_password=ndb.StringProperty()
+class Profile(ndb.Model):
+    name = ndb.StringProperty()
+    affiliated_group = ndb.StringProperty()
+    interests = ndb.StringProperty()
+    gender = ndb.StringProperty()
+    orientation = ndb.StringProperty()
+    pronouns = ndb.StringProperty()
+    user_id = ndb.StringProperty()
