@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Events Feed</title>
-    <link href='/styles/events.css'/>
+    <link rel='stylesheet' href='/styles/events.css'/>
 </script>
 
 </head>
@@ -20,7 +20,6 @@
 
 <h1>Events</h1>
 
-<div class='event_block'>
     {% for event in events %}
     <article class='event'>
       <span class='event_name'>{{ event.event_name }}</span>
@@ -33,7 +32,6 @@
       <span class='event_description'>{{ event.event_description }}</span>
     </article>
     {% endfor %}
-</div>
 
   </body>
 </html>

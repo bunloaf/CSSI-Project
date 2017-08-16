@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Create an Event</title>
     <link rel='stylesheet' href='/styles/submit_event.css'/>
+    <script src='/scripts/scripts.js'></script>
   </head>
 
   <body>
+
     <nav>
       <ul>
         <li><a href='/'>Home</a>
@@ -16,32 +18,30 @@
         <li><a href='/profile'>Profile</a>
       </ul>
 
-<div>
   <form id='submit_event' action='/submit_event' method='post'/>
-    <h1>Submit an Event</h1>
+    <h1>Submit Event</h1>
 
     <div id='meta_details'>
       <input id='event_name' class='event_input' type='text'
-        name='event_name' value='event_name' maxlength='30'/>
+        name='event_name' placeholder='Event Name' maxlength='30' required/>
       </br>
-      <input id='event_location' class='event_input' type='text'
-        name='event_location' value='event_location' maxlength='50'/>
+      <input  id='event_location' class='event_input' type='text'
+        name='event_location' placeholder='Location' maxlength='50' required/>
       </br>
       <input id='event_date' class='event_input' type='datetime-local'
-        name='event_date' value='event_date'/>
+        name='event_date' required/>
       </br>
-      <input id='event_category' class='event_input' type='text'
-        name='event_category' value='event_category' maxlength='30'/>
+      <input onfocus='this.select()' id='event_category' class='event_input' type='text'
+        name='event_category' placeholder='Category' maxlength='30' required/>
     </div>
 
     <div id='specific_details'>
       <textarea id='event_description' class='event_input' type='textarea'
-        name='event_description' value='event_description'
-        rows='10' cols='30' maxlength='500'/></textarea>
+        name='event_description' placeholder='Description'
+        rows='10' cols='30' maxlength='500' required/></textarea>
       <input id='submit' class='event_input' type='submit' value='Submit'/>
     </div>
   </form>
-<div>
 
   </body>
 </html>
