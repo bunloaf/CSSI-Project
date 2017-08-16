@@ -10,9 +10,11 @@ a {
 }
 
 div.menus {
+  display: inline-block;
   position: fixed;
   top: 0;
   right: 0;
+  margin-left: 100%;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -50,8 +52,9 @@ div.profile_menu {
 
 article {
   display: inline-block;
-  position: absolute;
-  margin: auto;
+  position: relative;
+  left: 20%;
+  right: 80%;
 }
 
 div.event {

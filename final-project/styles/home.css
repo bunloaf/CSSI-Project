@@ -1,5 +1,5 @@
 body {
-  background-color: #B8A5AE;
+  background-color: #90182B;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #EEE9E9;
 }
@@ -48,23 +48,4 @@ div.submit_event_menu {
 div.profile_menu {
   background-color: #061930;
   border: 1px solid #061930;
-}
-
-#submit_event {
-  position: absolute;
-  display: inline-block;
-  border: 1px solid black;
-  width: 500px;
-  padding: 10px;
-  margin: 5px;
-}
-
-#meta_details {
-  display: inline-block;
-  position: relative;
-}
-
-#specific_details {
-  display: inline-block;
-  position: relative;
 }
