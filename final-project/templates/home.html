@@ -2,22 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel='stylesheet' href='/styles/home.css'>
     <title>Home Page</title>
 </head>
   <body>
 
-      <p>Yo I'm the home page
+    <div id='header'>
+      <h1><em>LION'S ROAR</em></h1>
+      <p><em>"For Liberty and Justice for all..." </em></p>
 
-    <nav>
-      <ul>
-        <li><a href='/'>Home</a>
-        <li><a href='/about'>About</a>
-        <li><a href='/events'>Events</a>
-        <li><a href='/submit_event'>Submit Event</a>
-        <li><a href='/profile'>Profile</a>
-      </ul>
+        <nav id='navbar'>
+          <ul>
+            <li id='navlist'><a href='/'>Home</a>
+            <li id='navlist'><a href='/about'>About</a>
+            <li id='navlist'><a href='/events'>Events</a>
+            <li id='navlist'><a href='/submit_event'>Submit</a>
+            <li id='navlist'><a href='/profile'>Profile</a>
+          </ul>
 
-      {{ greeting }}
+        {{ greeting }}
+    </div>
+
+    <div id='newsfeed'>
+      
+
+
+
 
   </body>
 </html>

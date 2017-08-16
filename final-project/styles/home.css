@@ -1,0 +1,53 @@
+body {
+  /*background: linear-gradient(to bottom, #595657 0%, #d6d4d4 100%);*/
+  background: #595657;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  border: 0;
+  display: inline;
+  color: #aaf237;
+  font-size: 36px;
+  font-weight: 100;
+  font-family: dosif;
+  letter-spacing: 5px;
+}
+
+p {
+  color: #8900f2;
+  font-family: serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+#navbar {
+  display: inline-block;
+  position: relative;
+  font-size: 90%;
+  border: none;
+  padding-left: 10px;
+
+}
+
+#navlist {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  background-color: white;
+  letter-spacing: 2px;
+}
+
+#header {
+  background-color: #999994;
+  width: 100%;
+}
+
+#newsfeed {
+  
+}
