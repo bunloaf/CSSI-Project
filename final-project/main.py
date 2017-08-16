@@ -48,7 +48,7 @@ class SubmitEventHandler(webapp2.RequestHandler):
 
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
-        profile_template = env.get_template('profile.html')
+        profile_template = env.get_template('profile2.html')
         user = users.get_current_user()
         profile = Profile.query(Profile.user_id == user.user_id())
         vars = {
@@ -60,17 +60,17 @@ class ProfileHandler(webapp2.RequestHandler):
             'pronouns': Profile.pronouns
         }
         self.response.write(profile_template.render())
-
-        if profile:
-            vars = {
-                'name': Profile.name,
-                'affiliated_group': Profile.affiliated_group,
-                'interests': Profile.interests,
-                'gender': Profile.gender,
-                'orientation': Profile.orientation,
-                'pronouns': Profile.pronouns
-            }
-        self.response.write(profile_template.render(vars))
+        # 
+        # if profile:
+        #     vars = {
+        #         'name': Profile.name,
+        #         'affiliated_group': Profile.affiliated_group,
+        #         'interests': Profile.interests,
+        #         'gender': Profile.gender,
+        #         'orientation': Profile.orientation,
+        #         'pronouns': Profile.pronouns
+        #     }
+        # self.response.write(profile_template.render(vars))
 
 
     def post(self):
