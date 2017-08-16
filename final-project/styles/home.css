@@ -9,7 +9,7 @@ body {
 h1 {
   border: 0;
   display: inline;
-  color: #aaf237;
+  color: white;
   font-size: 36px;
   font-weight: 100;
   font-family: dosif;
@@ -21,6 +21,7 @@ p {
   font-family: serif;
   font-size: 16px;
   letter-spacing: 4px;
+  color: white;
 }
 
 #navbar {
@@ -49,5 +50,5 @@ p {
 }
 
 #newsfeed {
-  
+
 }

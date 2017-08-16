@@ -1,0 +1,88 @@
+body {
+  background-color: #0C0131;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #EEE9E9;
+}
+
+div.menus {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+}
+
+div.home_menu, div.about_menu, div.events_menu,
+div.submit_event_menu, div.profile_menu {
+  display: inline-block;
+  height:100px;
+  width: 270px;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin: 0px;
+  font-size: 30px;
+}
+
+div.home_menu {
+  background-color: #0C0131;
+}
+
+div.about_menu {
+  background-color: #1A075F;
+}
+
+div.events_menu {
+  background-color: #240F8D;
+  border: 0px solid #240F8D;
+}
+
+div.submit_event_menu {
+  background-color: #361CD0;
+}
+
+div.profile_menu {
+  background-color: #282828;
+}
+
+
+
+h1 {
+  border: 0;
+  display: inline;
+  color: white;
+  font-size: 36px;
+  font-weight: 100;
+  font-family: dosif;
+  letter-spacing: 5px;
+}
+
+p {
+  color: #8900f2;
+  font-family: serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+#navbar {
+  display: inline-block;
+  position: relative;
+  font-size: 90%;
+  border: none;
+  padding-left: 10px;
+
+}
+
+#navlist {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  background-color: white;
+  letter-spacing: 2px;
+}
