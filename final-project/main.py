@@ -9,12 +9,6 @@ env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         home_template = env.get_template('home.html')
-        # self.response.write(home_template.render())
-        # vars = {
-        #     'user': users.get_current_user(),
-        #     'logout_url': users.create_logout_url('/'),
-        #     'login_url': users.create_login_url('/')
-        #     }
         user = users.get_current_user()
         logout_url = users.create_logout_url('/')
         login_url = users.create_login_url('/')
@@ -22,15 +16,11 @@ class MainHandler(webapp2.RequestHandler):
             greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
                 (user.nickname(), logout_url))
         else:
-            greeting = ('<a href="%s">Sign in or register</a>.' % login_url)
-
+            greeting = ('<a href="%s">Sign in or register</a>' % login_url)
         vars = {
-        'greeting': greeting
-        }
-
+            'greeting': greeting,
+            }
         self.response.write(home_template.render(vars))
-
-
 
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
@@ -42,7 +32,6 @@ class EventsHandler(webapp2.RequestHandler):
         events = Event.query().fetch(limit=20)
         events_template = env.get_template('events.html')
         self.response.write(events_template.render({ 'events': events }))
-
 
 class SubmitEventHandler(webapp2.RequestHandler):
     def get(self):
