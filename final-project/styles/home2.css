@@ -1,8 +1,6 @@
 body {
-<<<<<<< HEAD
-  background-color: #90182B;
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #EEE9E9;
+  background-color: #0C0131;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 a {
@@ -11,51 +9,45 @@ a {
 }
 
 div.menus {
-  display: inline-block;
+  display: block;
   position: fixed;
-  top: 0;
-  right: 0;
-  margin-left: 100%;
+  top: 50px;
+  right: 0px;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
 div.submit_event_menu, div.profile_menu {
   display: inline-block;
   height:100px;
-  width: 350px;
-  left: 0;
+  width: 270px;
   padding-top: 10px;
   padding-left: 15px;
-  font-size: 40px;
-  font-weight: lighter;
-  letter-spacing: 5px;
+  margin: 0px;
+  font-size: 30px;
 }
 
 div.home_menu {
-  background-color: #0F355A;
-  border: 1px solid #0F355A;
+  background-color: #0C0131;
+}
+
+div.about_menu {
+  background-color: #1A075F;
 }
 
 div.events_menu {
-  background-color: #90182B;
-  border: 1px solid #90182B;
+  background-color: #240F8D;
+  border: 0px solid #240F8D;
 }
 
 div.submit_event_menu {
-  background-color: #B8A5AE;
-  border: 1px solid #B8A5AE;
+  background-color: #361CD0;
 }
 
 div.profile_menu {
-  background-color: #061930;
-  border: 1px solid #061930;
-=======
-  /*background: linear-gradient(to bottom, #595657 0%, #d6d4d4 100%);*/
-  background: #595657;
-  text-align: center;
-  margin: 0;
-  overflow: hidden;
+  background-color: #282828;
 }
+
+
 
 h1 {
   border: 0;
@@ -93,14 +85,4 @@ p {
   list-style: none;
   background-color: white;
   letter-spacing: 2px;
-}
-
-#header {
-  background-color: #999994;
-  width: 100%;
-}
-
-#newsfeed {
-
->>>>>>> 68263504e8de31b4a538acb05b0f63e6417b4b82
 }
