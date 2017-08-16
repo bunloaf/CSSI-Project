@@ -5,25 +5,28 @@
     <title>Create an Event</title>
     <link rel='stylesheet' href='/styles/submit_event.css'/>
     <script src='/scripts/scripts.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+    rel="stylesheet">
+
   </head>
 
   <body>
-
-    <nav>
-      <ul>
-        <li><a href='/'>Home</a>
-        <li><a href='/about'>About</a>
-        <li><a href='/events'>Events</a>
-        <li><a href='/submit_event'>Submit Event</a>
-        <li><a href='/profile'>Profile</a>
-      </ul>
+    <div class='menus'>
+      <a href='/'><div class='home_menu'>Home</div></a>
+        </br>
+      <a href='/events'><div class='events_menu'>Events</div></a>
+        </br>
+      <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
+        </br>
+      <a href='/profile'><div class='profile_menu'>Profile</div></a>
+    </div>
 
   <form id='submit_event' action='/submit_event' method='post'/>
     <h1>Submit Event</h1>
 
     <div id='meta_details'>
       <input id='event_name' class='event_input' type='text'
-        name='event_name' placeholder='Event Name' maxlength='30' required/>
+        name='event_name' placeholder='Event Name' maxlength='50' required/>
       </br>
       <input  id='event_location' class='event_input' type='text'
         name='event_location' placeholder='Location' maxlength='50' required/>
@@ -32,7 +35,7 @@
         name='event_date' required/>
       </br>
       <input onfocus='this.select()' id='event_category' class='event_input' type='text'
-        name='event_category' placeholder='Category' maxlength='30' required/>
+        name='event_category' placeholder='Category' maxlength='50' required/>
     </div>
 
     <div id='specific_details'>

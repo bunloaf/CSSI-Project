@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <title>Events Feed</title>
     <link rel='stylesheet' href='/styles/events.css'/>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web"
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
     rel="stylesheet">
 </head>
 
   <body>
+
+<main>
+
   <div class='menus'>
     <a href='/'><div class='home_menu'>Home</div></a>
       </br>
-    <a href='/about'><div class='about_menu'>About</div></a>
-      </br>
-    <a href='/events'><div class='events_menu'>Events</div></a>
+    <div class='events_menu'>Events</div>
       </br>
     <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
       </br>
@@ -36,7 +37,11 @@
           </br>
         <div class='line'></div>
     </article>
+  </br>
     {% endfor %}
 
+</main>
+
+<footer></footer>
   </body>
 </html>
