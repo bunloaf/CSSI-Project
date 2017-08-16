@@ -12,7 +12,7 @@ a {
 div.menus {
   display: inline-block;
   position: fixed;
-  top: 0;
+  top: 70px;
   right: 0;
   margin-left: 100%;
 }
@@ -53,17 +53,15 @@ div.profile_menu {
 article {
   display: inline-block;
   position: relative;
-  left: 20%;
-  right: 80%;
+  top: 50px;
+  left: 100px;
 }
 
 div.event {
   display: inline-block;
   position: relative;
   border: 1px solid white;
-  left: 200px;
-  width: 300px;
-  font-size: 90%;
+  width: 500px;
   padding: 20px;
 }
 
@@ -74,7 +72,7 @@ div.line {
   margin: 10px;
   display: inline-block;
   position: relative;
-  left: 350px;
+  left: 240px;
 }
 
 span.event_name {
@@ -113,3 +111,4 @@ footer {
   font-size: 12px;
   font-style: italic;
   text-indent: 15px;
+}
