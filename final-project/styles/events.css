@@ -1,45 +1,101 @@
-article.event {
+body {
+  background-color: #240F8D;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #EEE9E9;
+}
+
+div.menus {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+}
+
+div.home_menu, div.about_menu, div.events_menu,
+div.submit_event_menu, div.profile_menu {
+  display: inline-block;
+  height:100px;
+  width: 270px;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin: 0px;
+  font-size: 30px;
+}
+
+div.home_menu {
+  background-color: #0C0131;
+}
+
+div.about_menu {
+  background-color: #1A075F;
+}
+
+div.events_menu {
+  background-color: #240F8D;
+  border: 0px solid #240F8D;
+}
+
+div.submit_event_menu {
+  background-color: #361CD0;
+}
+
+div.profile_menu {
+  background-color: #282828;
+}
+
+article {
   display: inline-block;
   position: relative;
+  margin: 5px;
+  top: 20px;
+}
+
+div.event {
+  display: inline-block;
+  position: relative;
+  border: 1px solid white;
+  left: 150px;
+  top: 50px;
+  width: 300px;
   font-size: 90%;
-  border: 1px solid black;
-  padding: 10px;
+  padding: 20px;
+}
+
+
+div.line {
+  border-left: 10px dotted white;
+  height: 50px;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+  left: 280px;
+  top: 50px;
 }
 
 span.event_name {
   text-align: left;
   font-weight: bold;
   font-size: 30px;
+  color: white;
 }
 
 span.event_category {
   font-style: italic;
+  color: white;
 }
 
 span.event_location {
-
+  color: white;
 }
 
 span.event_date {
-
+  color: white;
 }
 
 span.event_description {
-
-}
-
-span.button {
-  background-color: blue;
   color: white;
-  padding: 10px
-}
-
-span.button a {
-  color: white;
-  text-decoration: none;
-  font-family: arial
-}
-
-span.button a:hover {
-  opacity: .5
 }

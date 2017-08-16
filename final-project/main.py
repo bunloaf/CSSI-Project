@@ -29,7 +29,7 @@ class AboutHandler(webapp2.RequestHandler):
 
 class EventsHandler(webapp2.RequestHandler):
     def get(self):
-        events = Event.query().fetch(limit=20)
+        events = Event.query().fetch(limit=50)
         events_template = env.get_template('events.html')
         self.response.write(events_template.render({ 'events': events }))
 
@@ -64,6 +64,8 @@ class ProfileHandler(webapp2.RequestHandler):
             'orientation': Profile.orientation,
             'pronouns': Profile.pronouns
         }
+        self.response.write(profile_template.render())
+
         if profile:
             vars = {
                 'name': Profile.name,
