@@ -1,18 +1,51 @@
 body {
-  background-color: #595657;
+  background-color: #B8A5AE;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #EEE9E9;
 }
 
 a {
   text-decoration: none;
+  color: #EEE9E9;
 }
 
-li {
-  border: 1px solid black;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  display: inline;
-  list-style: none;
+div.menus {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+div.home_menu, div.about_menu, div.events_menu,
+div.submit_event_menu, div.profile_menu {
+  display: inline-block;
+  height:100px;
+  width: 350px;
+  left: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+div.home_menu {
+  background-color: #0F355A;
+  border: 1px solid #0F355A;
+}
+
+div.events_menu {
+  background-color: #90182B;
+  border: 1px solid #90182B;
+}
+
+div.submit_event_menu {
+  background-color: #B8A5AE;
+  border: 1px solid #B8A5AE;
+}
+
+div.profile_menu {
+  background-color: #061930;
+  border: 1px solid #061930;
 }
 
 #submit_event {
@@ -22,7 +55,6 @@ li {
   width: 500px;
   padding: 10px;
   margin: 5px;
-  background-color: gray;
 }
 
 #meta_details {

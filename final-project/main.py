@@ -22,11 +22,6 @@ class MainHandler(webapp2.RequestHandler):
             }
         self.response.write(home_template.render(vars))
 
-class AboutHandler(webapp2.RequestHandler):
-    def get(self):
-        about_template = env.get_template('about.html')
-        self.response.write(about_template.render())
-
 class EventsHandler(webapp2.RequestHandler):
     def get(self):
         events = Event.query().fetch(limit=50)
@@ -95,7 +90,6 @@ class ProfileHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/about', AboutHandler),
     ('/events', EventsHandler),
     ('/submit_event', SubmitEventHandler),
     ('/profile', ProfileHandler),
