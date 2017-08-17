@@ -2,28 +2,22 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 body {
   background-color: #0F355A;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #EEE9E9;
 }
 
-a {
-  text-decoration: none;
-  color: #EEE9E9;
-}
-
-h1 {
-  font-size: 30px;
-  text-align: center;
-  white-space: pre;
-}
-
-div.title {
-  display: inline-block;
-  position: fixed;
+div.head_title {
+  position: absolute;
   top: 0px;
-  left: 30px;
+}
+
+#title {
+  font-family: 'Permanent Marker';
+  font-size: 80px;
+  margin: 0;
 }
 
 div.menus {
@@ -32,6 +26,11 @@ div.menus {
   top: 0;
   right: 0;
   margin-left: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #EEE9E9;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -58,7 +57,7 @@ div.events_menu {
 }
 
 div.events_menu:hover {
-  transform: rotate(10deg);
+  transform: scale(.8);
   transition: ease 1s;
 }
 
@@ -67,58 +66,19 @@ div.submit_event_menu {
   border: 1px solid #061930;
 }
 
+div.submit_event_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
 div.profile_menu {
   background-color: #B8A5AE;
   border: 1px solid #B8A5AE;
 }
 
-#sidewords {
-  font-size: 35px;
-  text-align: center;
-  white-space: pre;
-}
-
-div.title {
-  display: inline-block;
-  position: fixed;
-  top: 0px;
-  left: 30px;
-}
-
-
-
-#title {
-}
-
-h1 {
-  border: 0;
-  display: inline;
-  color: white;
-  font-size: 36px;
-  font-weight: 300;
-  font-family: 'Permanent Marker';
-  letter-spacing: 20px;
-}
-
-#header {
-  position: relative;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  left: 35%;
-  padding-bottom: 15px;
-  width: 500px;
-  text-align: center;
-}
-
-footer {
-  border-top: 1px solid white;
-  position: relative;
-  margin-top: 50px;
-  padding-top: 5px;
-  padding-left: 10px;
-  font-style: italic;
-  font-size: 12px;
+div.profile_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
 }
 
 p.subtitle {
@@ -135,26 +95,6 @@ p {
   font-size: 16px;
   letter-spacing: 4px;
   color: white;
-}
-
-#navbar {
-  display: inline-block;
-  position: relative;
-  font-size: 90%;
-  border: none;
-  padding-left: 10px;
-
-}
-
-#navlist {
-  border: 1px solid black;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  display: inline-block;
-  list-style: none;
-  background-color: white;
-  letter-spacing: 2px;
 }
 
 #newsfeed {
