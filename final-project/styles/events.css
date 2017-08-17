@@ -7,42 +7,21 @@ body {
   color: #EEE9E9;
 }
 
-a {
-  text-decoration: none;
-  color: #EEE9E9;
+div.head_title {
+  position: absolute;
+  top: 0px;
 }
 
 #title {
   font-family: 'Permanent Marker';
   font-size: 80px;
   margin: 0;
-  position: static;
-  top: 0px;
-}
-
-div.head_title {
-  position: absolute;
-  top: 0px;
-}
-
-div.side {
-  font-size: 30px;
-  text-align: center;
-  white-space: pre;
-  position: fixed;
-  top: 0px;
-}
-
-input.showInMap {
-  background-color: white;
-  border-radius: 30%;
-  border: none;
 }
 
 div.title {
   display: inline-block;
   position: fixed;
-  top: 0px;
+  bottom: 0px;
   left: 30px;
 }
 
@@ -54,16 +33,9 @@ div.menus {
   margin-left: 100%;
 }
 
-#mapContainer {
-  position: fixed;
-  height: 170px;
-  width: 367px;
-  padding: 0;
-  margin: 0;
-}
-
-#map {
-  height: 170px;
+a {
+  text-decoration: none;
+  color: #EEE9E9;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -119,6 +91,24 @@ article {
   position: relative;
   top: 100px;
   left: 400px;
+}
+
+input.showInMap {
+  background-color: white;
+  border-radius: 30%;
+  border: none;
+}
+
+#mapContainer {
+  position: fixed;
+  height: 170px;
+  width: 367px;
+  padding: 0;
+  margin: 0;
+}
+
+#map {
+  height: 170px;
 }
 
 div.event {

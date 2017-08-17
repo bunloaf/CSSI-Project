@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class EventsHandler(webapp2.RequestHandler):
     def get(self):
+        search_date = self.request.get('date')
         user = users.get_current_user()
         logout_url = users.create_logout_url('/')
         login_url = users.create_login_url('/')
@@ -32,7 +33,15 @@ class EventsHandler(webapp2.RequestHandler):
                 (user.nickname(), logout_url))
         else:
             greeting = ('<a href="%s">Sign in or register</a>' % login_url)
-        events = Event.query().fetch(limit=50)
+
+        if (search_date):
+            day_after_search_date = search_date[:-1] + chr(ord(search_date[-1])+1)
+            print search_date
+            print day_after_search_date
+            events = Event.query(Event.event_date >= search_date,
+                Event.event_date < day_after_search_date).order(-Event.event_date).fetch(limit=50)
+        else:
+            events = Event.query().order(-Event.event_date).fetch(limit=50)
         events_template = env.get_template('events.html')
         self.response.write(events_template.render({ 'events': events, 'greeting': greeting }))
 
@@ -68,7 +77,7 @@ class SubmitEventHandler(webapp2.RequestHandler):
 
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
-        profile_template = env.get_template('profile2.html')
+        profile_template = env.get_template('profile.html')
         user = users.get_current_user()
         vars = {
             'name': Profile.name,

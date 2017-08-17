@@ -15,29 +15,18 @@
   </head>
 
   <body>
-    <div class='head_title'>
-    <h1 id='title'>
-      Lion's Roar
-    </h1>
-    {{ greeting }}
-    </div>
-
     <div id="main">
-      <div class='side'>
-        <h1>
-          H
-          e
-          a
-          r
+      <div class='head_title'>
+      <h1 id='title'>
+        Lion's Roar
+      </h1>
+      {{ greeting }}
+      </div>
 
-          U
-          s
-
-          R
-          o
-          a
-          r
-        </h1>
+      <div class='title'>
+          <h1 id='side'>
+          H  e  a  r.   U  s.   R  o  a  r.
+          </h1>
       </div>
 
     <div class='menus'>
@@ -49,6 +38,9 @@
         <div id='map'></div>
       </div>
     </div>
+</br>
+</br>
+</br>
 
     {% for event in events %}
     <article>
