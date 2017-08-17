@@ -22,21 +22,25 @@
           </div>
         <div id='jd8765'>
           <p>
-            <form action='/edit_profile' method='post'>
+            <form action='/profile' method='post'>
               <ul id='wi19874'>
-                <li id='gh6268'>Name: {{profile.name}}
-                <li id='gh6268'>Affiliated Group: {{profile.affiliated_group}}
-                <li id='gh6268'>Interested in: {{profile.interested_in}}
-                <li id='gh6268'>Gender: {{profile.gender}}
-                <li id='gh6268'>Orientation: {{profile.orientation}}
-                <li id='gh6268'>Pronouns: {{profile.pronouns}}
+                <li id='gh6268'>Name:<input type='text' value="{{ name }}"  name='name'>
+                <li id='gh6268'>Affiliated Group:<input type='text' name='affiliated.group'>
+                <li id='gh6268'>Interested in:<input type='text' name='interests'>
+                <li id='gh6268'>Gender:<input type='text' name='gender'>
+                <li id='gh6268'>Orientation:<input type='text' name='orientation'>
+                <li id='gh6268'>Pronouns:<input type='text' name='pronouns'>
               <input type='submit' value='Update'>
             </form>
         </div>
 
         <p>
-          <h2>About lil' ol' me:<br>
-          <textarea rows='6' cols='150'></textarea>
+          <form action='/profileedit' method='post'>
+              <h2>About lil' ol' me:<br>
+              <textarea rows='6' cols='150'></textarea>
+            <input type='submit' value='Update'>
+          <form>
+        </p>
 
 
 
