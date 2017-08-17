@@ -81,6 +81,19 @@ class ProfileHandler(webapp2.RequestHandler):
         }
         self.response.write(profile_template.render())
 
+        #
+        # if profile:
+        #     vars = {
+        #         'name': Profile.name,
+        #         'affiliated_group': Profile.affiliated_group,
+        #         'interests': Profile.interests,
+        #         'gender': Profile.gender,
+        #         'orientation': Profile.orientation,
+        #         'pronouns': Profile.pronouns
+        #     }
+        # self.response.write(profile_template.render(vars))
+
+
         profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
             vars = {
