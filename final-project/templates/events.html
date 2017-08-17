@@ -6,6 +6,11 @@
     <link rel='stylesheet' href='/styles/events.css'/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
     rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='/scripts/map.js'></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyz_eMufP6fT-krchIpNGbKaSJE1T1oxA">
+    </script>
 </head>
 
 <body>
@@ -29,11 +34,8 @@
 
   <div class='menus'>
     <a href='/'><div class='home_menu'>Home</div></a>
-      </br>
     <div class='events_menu'>Events</div>
-      </br>
     <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
-      </br>
     <a href='/profile'><div class='profile_menu'>Profile</div></a>
   </div>
 
@@ -46,17 +48,15 @@
         <span class='event_date'>{{ event.event_date }}</span>
           </br>
         <span class='event_location'>{{ event.event_location }}</span>
+        <input type='submit' id='showInMap' value='Show Map'>
           </br>
         <span class='event_description'>{{ event.event_description }}</span>
-        </div>
+      </div>
           </br>
         <div class='line'></div>
     </article>
-  </br>
     {% endfor %}
+<div id='map'></div>
 </div>
-
-<footer>error 404: group_name not found</footer>
-
 </body>
 </html>
