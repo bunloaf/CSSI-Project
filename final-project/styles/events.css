@@ -66,6 +66,11 @@ div.home_menu {
   border: 1px solid #0F355A;
 }
 
+div.home_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
 div.events_menu {
   background-color: #90182B;
   border: 1px solid #90182B;
@@ -76,9 +81,19 @@ div.submit_event_menu {
   border: 1px solid #061930;
 }
 
+div.submit_event_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
 div.profile_menu {
   background-color: #B8A5AE;
   border: 1px solid #B8A5AE;
+}
+
+div.profile_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
 }
 
 article {
@@ -95,7 +110,6 @@ div.event {
   width: 350px;
   padding: 20px;
 }
-
 
 div.line {
   border-left: 10px dotted white;
