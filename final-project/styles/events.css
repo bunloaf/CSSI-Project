@@ -9,13 +9,37 @@ a {
   color: #EEE9E9;
 }
 
+h1 {
+  font-size: 35px;
+  text-align: center;
+  white-space: pre;
+}
+
+footer {
+  border-top: 1px solid white;
+  position: relative;
+  margin-top: 50px;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+div.title {
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  left: 30px;
+}
+
 div.menus {
   display: inline-block;
   position: fixed;
-  top: 70px;
+  top: 100px;
   right: 0;
   margin-left: 100%;
 }
+
 
 div.home_menu, div.about_menu, div.events_menu,
 div.submit_event_menu, div.profile_menu {
@@ -35,6 +59,11 @@ div.home_menu {
   border: 1px solid #0F355A;
 }
 
+div.home_menu:hover {
+  transform: rotate(10deg);
+  transition: ease 1s;
+}
+
 div.events_menu {
   background-color: #90182B;
   border: 1px solid #90182B;
@@ -45,23 +74,33 @@ div.submit_event_menu {
   border: 1px solid #B8A5AE;
 }
 
+div.submit_event_menu:hover {
+  transform: rotate(10deg);
+  transition: ease 1s;
+}
+
 div.profile_menu {
   background-color: #061930;
   border: 1px solid #061930;
+}
+
+div.profile_menu:hover {
+  transform: rotate(10deg);
+  transition: ease 1s;
 }
 
 article {
   display: inline-block;
   position: relative;
   top: 50px;
-  left: 100px;
+  left: 270px;
 }
 
 div.event {
   display: inline-block;
   position: relative;
   border: 1px solid white;
-  width: 500px;
+  width: 350px;
   padding: 20px;
 }
 
@@ -72,7 +111,7 @@ div.line {
   margin: 10px;
   display: inline-block;
   position: relative;
-  left: 240px;
+  left: 170px;
 }
 
 span.event_name {
@@ -97,18 +136,4 @@ span.event_date {
 
 span.event_description {
   color: white;
-}
-
-footer {
-  border-top: 1px solid white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-top: 50px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-size: 12px;
-  font-style: italic;
-  text-indent: 15px;
 }
