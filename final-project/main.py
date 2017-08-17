@@ -61,7 +61,6 @@ class ProfileHandler(webapp2.RequestHandler):
             'pronouns': Profile.pronouns
         }
         self.response.write(profile_template.render())
-<<<<<<< HEAD
 
         #
         # if profile:
@@ -75,8 +74,6 @@ class ProfileHandler(webapp2.RequestHandler):
         #     }
         # self.response.write(profile_template.render(vars))
 
-=======
->>>>>>> a3449d13fc2a629451d8f021f602ea3daa15ebcf
 
         profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
