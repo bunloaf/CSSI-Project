@@ -39,10 +39,7 @@
     <a href='/profile'><div class='profile_menu'>Profile</div></a>
   </div>
 
-  <div id='map'></div>
-
     {% for event in events %}
-
     <article>
       <div class='event'>
         <span class='event_name'>{{ event.event_name }}</span>
@@ -54,14 +51,12 @@
         <input type='submit' id='showInMap' value='Show Map'>
           </br>
         <span class='event_description'>{{ event.event_description }}</span>
-        </div>
+      </div>
           </br>
         <div class='line'></div>
     </article>
-
-  </br>
     {% endfor %}
+<div id='map'></div>
 </div>
-
 </body>
 </html>
