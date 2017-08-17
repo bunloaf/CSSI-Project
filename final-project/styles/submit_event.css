@@ -15,16 +15,10 @@ a {
   color: #EEE9E9;
 }
 
-#side {
-  font-size: 30px;
-  text-align: center;
-  white-space: pre;
-}
-
 #title {
   font-family: 'Permanent Marker';
   font-size: 80px;
-  padding: 10;
+  padding: 0;
   margin: 0;
 }
 
