@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link rel='stylesheet' href='/styles/home2.css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/calendar.js"></script>
     <title>Home Page</title>
 </head>
   <body>
@@ -47,14 +49,12 @@
         </div>
     </div>
 
-<!-- calendar -->
-<div id="calendar">
-  <input type="date" id='date-picker'>
-  <div id='search-results'>
-  </div>
-</div>
-
-
+    <div id="calendar">
+          <p>Search for events by date:</p>
+          <input type="date" id="date-picker">
+          <div id="search-results">
+          </div>
+        </div>
 
   </body>
 </html>
