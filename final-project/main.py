@@ -40,6 +40,7 @@ class SubmitEventHandler(webapp2.RequestHandler):
             event_name=self.request.get('event_name'),
             event_location=self.request.get('event_location'),
             event_date=self.request.get('event_date'),
+            event_time=self.request.get('event_time'),
             event_description=self.request.get('event_description'),
             event_category=self.request.get('event_category'),
         )
@@ -60,7 +61,7 @@ class ProfileHandler(webapp2.RequestHandler):
             'pronouns': Profile.pronouns
         }
         self.response.write(profile_template.render())
-        
+
         profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
             vars = {

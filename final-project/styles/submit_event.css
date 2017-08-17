@@ -1,5 +1,5 @@
 body {
-  background-color: #B8A5AE;
+  background-color: #061930;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #EEE9E9;
 }
@@ -10,7 +10,7 @@ a {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   white-space: pre;
 }
@@ -64,13 +64,13 @@ div.events_menu {
 }
 
 div.submit_event_menu {
-  background-color: #B8A5AE;
-  border: 1px solid #B8A5AE;
+  background-color: #061930;
+  border: 1px solid #061930;
 }
 
 div.profile_menu {
-  background-color: #061930;
-  border: 1px solid #061930;
+  background-color: #B8A5AE;
+  border: 1px solid #B8A5AE;
 }
 
 article {
@@ -104,9 +104,10 @@ form {
   border-left: 6px solid white;
   width: 500px;
   top: 100px;
-  left: 100px;
+  left: 300px;
   padding: 20px;
   margin: 5px;
+  font-size: 30px;
 }
 
 #submit {

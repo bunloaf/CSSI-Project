@@ -10,9 +10,15 @@ a {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   white-space: pre;
+}
+
+#main {
+  position: relative;
+  width: calc(100% - 370px);
+  overflow: hidden;
 }
 
 div.title {
@@ -30,11 +36,16 @@ div.menus {
   margin-left: 100%;
 }
 
+#mapContainer {
+  position: fixed;
+  height: 170px;
+  width: 367px;
+  padding: 0;
+  margin: 0;
+}
+
 #map {
   height: 170px;
-  width: 500px;
-  position: fixed;
-  top: 10px;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -61,13 +72,13 @@ div.events_menu {
 }
 
 div.submit_event_menu {
-  background-color: #B8A5AE;
-  border: 1px solid #B8A5AE;
+  background-color: #061930;
+  border: 1px solid #061930;
 }
 
 div.profile_menu {
-  background-color: #061930;
-  border: 1px solid #061930;
+  background-color: #B8A5AE;
+  border: 1px solid #B8A5AE;
 }
 
 article {
