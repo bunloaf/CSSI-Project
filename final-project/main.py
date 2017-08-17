@@ -68,7 +68,7 @@ class SubmitEventHandler(webapp2.RequestHandler):
 
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
-        profile_template = env.get_template('profile2.html')
+        profile_template = env.get_template('profile.html')
         user = users.get_current_user()
         vars = {
             'name': Profile.name,
