@@ -70,7 +70,6 @@ class ProfileHandler(webapp2.RequestHandler):
     def get(self):
         profile_template = env.get_template('profile2.html')
         user = users.get_current_user()
-        profile_template = env.get_template('profile.html')
         vars = {
             'name': Profile.name,
             'affiliated_group': Profile.affiliated_group,
@@ -79,7 +78,7 @@ class ProfileHandler(webapp2.RequestHandler):
             'orientation': Profile.orientation,
             'pronouns': Profile.pronouns
         }
-        self.response.write(profile_template.render())
+        # self.response.write(profile_template.render())
 
         #
         # if profile:

@@ -178,3 +178,7 @@ p {
 #newsfeedtitle {
   letter-spacing: 7px;
 }
+
+#calendar {
+  position: relative
+}
