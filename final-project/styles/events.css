@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 body {
   background-color: #90182B;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -9,16 +12,31 @@ a {
   color: #EEE9E9;
 }
 
-h1 {
+#title {
+  font-family: 'Permanent Marker';
+  font-size: 80px;
+  margin: 0;
+  position: static;
+  top: 0px;
+}
+
+div.head_title {
+  position: absolute;
+  top: 0px;
+}
+
+div.side {
   font-size: 30px;
   text-align: center;
   white-space: pre;
+  position: fixed;
+  top: 0px;
 }
 
-#main {
-  position: relative;
-  width: calc(100% - 370px);
-  overflow: scroll;
+input.showInMap {
+  background-color: white;
+  border-radius: 30%;
+  border: none;
 }
 
 div.title {
@@ -99,7 +117,7 @@ div.profile_menu:hover {
 article {
   display: inline-block;
   position: relative;
-  top: 50px;
+  top: 100px;
   left: 400px;
 }
 
@@ -142,4 +160,3 @@ span.event_date {
 
 span.event_description {
   color: white;
-}

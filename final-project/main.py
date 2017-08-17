@@ -24,14 +24,33 @@ class MainHandler(webapp2.RequestHandler):
 
 class EventsHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        logout_url = users.create_logout_url('/')
+        login_url = users.create_login_url('/')
+        if user:
+            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+                (user.nickname(), logout_url))
+        else:
+            greeting = ('<a href="%s">Sign in or register</a>' % login_url)
         events = Event.query().fetch(limit=50)
         events_template = env.get_template('events.html')
-        self.response.write(events_template.render({ 'events': events }))
+        self.response.write(events_template.render({ 'events': events, 'greeting': greeting }))
 
 class SubmitEventHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        logout_url = users.create_logout_url('/')
+        login_url = users.create_login_url('/')
+        if user:
+            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+                (user.nickname(), logout_url))
+        else:
+            greeting = ('<a href="%s">Sign in or register</a>' % login_url)
+        vars = {
+            'greeting': greeting,
+            }
         submit_event_template = env.get_template('submit_event.html')
-        self.response.write(submit_event_template.render())
+        self.response.write(submit_event_template.render(vars))
 
     def post(self):
         event_created_template = env.get_template('event_created.html')

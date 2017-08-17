@@ -15,8 +15,15 @@
   </head>
 
   <body>
+    <div class='head_title'>
+    <h1 id='title'>
+      Lion's Roar
+    </h1>
+    {{ greeting }}
+    </div>
+
     <div id="main">
-      <div class='title'>
+      <div class='side'>
         <h1>
           H
           e
@@ -31,7 +38,7 @@
           a
           r
         </h1>
-    </div>
+      </div>
 
     <div class='menus'>
       <a href='/'><div class='home_menu'>Home</div></a>
@@ -51,6 +58,7 @@
           </br>
         <span class='event_date'>{{ event.event_date }}</span>
         <span class='event_time'>{{ event.event_time }}</span>
+          </br>
         <span class='event_location'>{{ event.event_location }}</span>
         <input type='submit' class='showInMap' value='Show Map'/>
           </br>

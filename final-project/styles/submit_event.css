@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 body {
   background-color: #061930;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #EEE9E9;
+}
+
+b{
+  text-indent: 10px;
 }
 
 a {
@@ -9,17 +15,30 @@ a {
   color: #EEE9E9;
 }
 
-h1 {
+#side {
   font-size: 30px;
   text-align: center;
   white-space: pre;
 }
 
+#title {
+  font-family: 'Permanent Marker';
+  font-size: 80px;
+  padding: 10;
+  margin: 0;
+}
+
+div.head_title {
+  position: absolute;
+  top: 0px;
+}
+
 div.title {
   display: inline-block;
   position: fixed;
-  top: 0px;
-  left: 30px;
+  bottom:0px;
+  letter-spacing: 10px;
+  right: 30px;
 }
 
 div.menus {
@@ -78,38 +97,13 @@ div.profile_menu:hover {
   transition: ease 1s;
 }
 
-article {
-  display: inline-block;
-  position: relative;
-  top: 50px;
-  left: 150px;
-}
-
-div.event {
-  display: inline-block;
-  position: relative;
-  border: 1px solid white;
-  width: 500px;
-  padding: 20px;
-}
-
-
-div.line {
-  border-left: 10px dotted white;
-  height: 50px;
-  margin: 10px;
-  display: inline-block;
-  position: relative;
-  left: 240px;
-}
-
 form {
   position: absolute;
   display: inline-block;
   border-left: 6px solid white;
   width: 500px;
-  top: 100px;
-  left: 300px;
+  top: 200px;
+  left: 0px;
   padding: 20px;
   margin: 5px;
   font-size: 30px;
