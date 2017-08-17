@@ -12,6 +12,22 @@
 
   <body>
 
+<div class='title'>
+<h1>
+L
+i
+o
+n
+'
+s
+
+R
+o
+a
+r
+</h1>
+</div>
+
     <div class='menus'>
       <a href='/'><div class='home_menu'>Home</div></a>
         </br>
@@ -22,32 +38,22 @@
       <a href='/profile'><div class='profile_menu'>Profile</div></a>
     </div>
 
-  <form id='submit_event' action='/submit_event' method='post'/>
-    <h1>Submit Event</h1>
-
-    <div id='meta_details'>
+  <form action='/submit_event' method='post'/>
       <input id='event_name' class='event_input' type='text'
         name='event_name' placeholder='Event Name' maxlength='50' required/>
-      </br>
+        <input id='event_category' class='event_input' type='text'
+          name='event_category' placeholder='Category' maxlength='50' required/>
+        </br>
       <input  id='event_location' class='event_input' type='text'
         name='event_location' placeholder='Location' maxlength='50' required/>
-      </br>
       <input id='event_date' class='event_input' type='datetime-local'
         name='event_date' required/>
       </br>
-      <input onfocus='this.select()' id='event_category' class='event_input' type='text'
-        name='event_category' placeholder='Category' maxlength='50' required/>
-    </div>
-
-    <div id='specific_details'>
       <textarea id='event_description' class='event_input' type='textarea'
         name='event_description' placeholder='Description'
         rows='10' cols='30' maxlength='500' required/></textarea>
-      <input id='submit' class='event_input' type='submit' value='Submit'/>
-    </div>
+        <input id='submit' class='event_input' type='submit' value='Submit'/>
   </form>
-
-  <footer></footer>
 
   </body>
 </html>
