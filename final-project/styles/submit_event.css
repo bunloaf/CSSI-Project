@@ -131,17 +131,3 @@ form {
   position: absolute;
   display: inline-block;
 }
-
-footer {
-  border-top: 1px solid white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-top: 50px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  font-size: 12px;
-  font-style: italic;
-  text-indent: 15px;
-}
