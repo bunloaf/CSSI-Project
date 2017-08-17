@@ -120,5 +120,7 @@ p {
 }
 
 #calendar {
-  position: relative
+  position: absolute;
+  left: 500px;
+  top: 130px;
 }
