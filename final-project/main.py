@@ -40,6 +40,7 @@ class SubmitEventHandler(webapp2.RequestHandler):
             event_name=self.request.get('event_name'),
             event_location=self.request.get('event_location'),
             event_date=self.request.get('event_date'),
+            event_time=self.request.get('event_time'),
             event_description=self.request.get('event_description'),
             event_category=self.request.get('event_category'),
         )
@@ -60,6 +61,7 @@ class ProfileHandler(webapp2.RequestHandler):
             'pronouns': Profile.pronouns
         }
         self.response.write(profile_template.render())
+<<<<<<< HEAD
 
         #
         # if profile:
@@ -73,6 +75,8 @@ class ProfileHandler(webapp2.RequestHandler):
         #     }
         # self.response.write(profile_template.render(vars))
 
+=======
+>>>>>>> a3449d13fc2a629451d8f021f602ea3daa15ebcf
 
         profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
@@ -84,8 +88,6 @@ class ProfileHandler(webapp2.RequestHandler):
                 'orientation': Profile.orientation,
                 'pronouns': Profile.pronouns
             }
-            # vars =
-            #     []
         self.response.write(profile_template.render(vars))
 
     def post(self):

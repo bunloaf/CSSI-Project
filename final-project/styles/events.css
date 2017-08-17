@@ -10,9 +10,15 @@ a {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   white-space: pre;
+}
+
+#main {
+  position: relative;
+  width: calc(100% - 370px);
+  overflow: scroll;
 }
 
 div.title {
@@ -30,11 +36,16 @@ div.menus {
   margin-left: 100%;
 }
 
+#mapContainer {
+  position: fixed;
+  height: 170px;
+  width: 367px;
+  padding: 0;
+  margin: 0;
+}
+
 #map {
   height: 170px;
-  width: 500px;
-  position: fixed;
-  top: 10px;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -55,26 +66,41 @@ div.home_menu {
   border: 1px solid #0F355A;
 }
 
+div.home_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
 div.events_menu {
   background-color: #90182B;
   border: 1px solid #90182B;
 }
 
 div.submit_event_menu {
+  background-color: #061930;
+  border: 1px solid #061930;
+}
+
+div.submit_event_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
+div.profile_menu {
   background-color: #B8A5AE;
   border: 1px solid #B8A5AE;
 }
 
-div.profile_menu {
-  background-color: #061930;
-  border: 1px solid #061930;
+div.profile_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
 }
 
 article {
   display: inline-block;
   position: relative;
   top: 50px;
-  left: 270px;
+  left: 400px;
 }
 
 div.event {
@@ -84,7 +110,6 @@ div.event {
   width: 350px;
   padding: 20px;
 }
-
 
 div.line {
   border-left: 10px dotted white;

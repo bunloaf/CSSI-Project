@@ -9,35 +9,39 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src='/scripts/map.js'></script>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyz_eMufP6fT-krchIpNGbKaSJE1T1oxA">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyz_eMufP6fT-krchIpNGbKaSJE1T1oxA&callback=initMap">
     </script>
-</head>
+    <script src='/scripts/geocode.js'></script>
+  </head>
 
-<body>
-<div>
-  <div class='title'>
-    <h1>
-    L
-    i
-    o
-    n
-    '
-    s
+  <body>
+    <div id="main">
+      <div class='title'>
+        <h1>
+          H
+          e
+          a
+          r
 
-    R
-    o
-    a
-    r
-    </h1>
-  </div>
+          U
+          s
 
+          R
+          o
+          a
+          r
+        </h1>
+    </div>
 
-  <div class='menus'>
-    <a href='/'><div class='home_menu'>Home</div></a>
-    <div class='events_menu'>Events</div>
-    <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
-    <a href='/profile'><div class='profile_menu'>Profile</div></a>
-  </div>
+    <div class='menus'>
+      <a href='/'><div class='home_menu'>Home</div></a>
+      <div class='events_menu'>Events</div>
+      <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
+      <a href='/profile'><div class='profile_menu'>Profile</div></a>
+      <div id="mapContainer">
+        <div id='map'></div>
+      </div>
+    </div>
 
     {% for event in events %}
     <article>
@@ -46,17 +50,18 @@
         <span class='event_category'>{{ event.event_category }}</span>
           </br>
         <span class='event_date'>{{ event.event_date }}</span>
-          </br>
+        <span class='event_time'>{{ event.event_time }}</span>
         <span class='event_location'>{{ event.event_location }}</span>
-        <input type='submit' id='showInMap' value='Show Map'>
+        <input type='submit' class='showInMap' value='Show Map'/>
           </br>
         <span class='event_description'>{{ event.event_description }}</span>
       </div>
           </br>
         <div class='line'></div>
     </article>
+          </br>
     {% endfor %}
-<div id='map'></div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>
