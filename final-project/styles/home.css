@@ -106,7 +106,8 @@ p {
   margin-top: 50px;
   text-align: center;
   background-color: #90182B;
-
+  position: absolute;
+  top: 200px;
 }
 
 #eventitem {
