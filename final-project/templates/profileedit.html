@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel='stylesheet' href='/styles/profile.css'>
+  </head>
+  <body>
+
+        <h1><em> YOUR PROFILE </em></h1><br>
+
+        <div class='menus'>
+          <a href='/'><div class='home_menu'>Home</div></a>
+          <a href='/events'><div class='events_menu'>Events</div></a>
+          <a href='/submit_event'><div class='submit_event_menu'>Submit Event</div></a>
+          <a href='/profile'><div class='profile_menu'>Profile</div></a>
+        </div>
+
+
+          <div id='hd7652'>
+            <img src="http://3.bp.blogspot.com/-uCOOAzMHANo/Tc-Gn4ziU5I/AAAAAAAAA-Y/sn0zOmfISns/s1600/AWESOME%2BFACEBOOK%2BPROFILE%2BPICTURES1.jpg"</img>
+          </div>
+        <div id='jd8765'>
+          <p>
+            <form action='/profile' method='post'>
+              <ul id='wi19874'>
+                <li id='gh6268'>Name:<input type='text' value="{{ name }}"  name='name'>
+                <li id='gh6268'>Affiliated Group:<input type='text' name='affiliated.group'>
+                <li id='gh6268'>Interested in:<input type='text' name='interests'>
+                <li id='gh6268'>Gender:<input type='text' name='gender'>
+                <li id='gh6268'>Orientation:<input type='text' name='orientation'>
+                <li id='gh6268'>Pronouns:<input type='text' name='pronouns'>
+              <input type='submit' value='Update'>
+            </form>
+        </div>
+
+        <p>
+          <form action='/profileedit' method='post'>
+              <h2>About lil' ol' me:<br>
+              <textarea rows='6' cols='150'></textarea>
+            <input type='submit' value='Update'>
+          <form>
+        </p>
+
+
+
+  </body>
+</html>

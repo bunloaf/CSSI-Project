@@ -105,16 +105,16 @@ class ProfileHandler(webapp2.RequestHandler):
         profile = Profile.query(Profile.user_id == user.user_id())
         if profile:
             vars = {
-                'name': Profile.name,
-                'affiliated_group': Profile.affiliated_group,
-                'interests': Profile.interests,
-                'gender': Profile.gender,
-                'orientation': Profile.orientation,
-                'pronouns': Profile.pronouns
+                'profile': profile
             }
         self.response.write(profile_template.render(vars))
 
     def post(self):
+        profile_template = env.get_template('profile2.html')
+
+        user = users.get_current_user()
+        profile = Profile.query(Profile.user_id == user.user_id()).get()
+
         user_id = users.get_current_user().user_id()
         profile = Profile(
             name=self.request.get('name'),
@@ -126,7 +126,25 @@ class ProfileHandler(webapp2.RequestHandler):
             user_id=user_id
         )
         profile.put()
-        self.response.write('Thank youu')
+
+        self.response.write(profile_template.render({'profile': profile}))
+
+class EditProfileHandler(webapp2.RequestHandler):
+    def post(self):
+        profile_template = env.get_template('profileedit.html')
+        user = users.get_current_user()
+        profile = Profile.query(Profile.user_id == user.user_id())
+        if profile:
+            vars = {
+                'name': Profile.name,
+                'affiliated_group': Profile.affiliated_group,
+                'interests': Profile.interests,
+                'gender': Profile.gender,
+                'orientation': Profile.orientation,
+                'pronouns': Profile.pronouns
+            }
+        self.response.write(profile_template.render(vars))
+
 
 
 app = webapp2.WSGIApplication([
@@ -134,5 +152,6 @@ app = webapp2.WSGIApplication([
     ('/events', EventsHandler),
     ('/submit_event', SubmitEventHandler),
     ('/profile', ProfileHandler),
-    ('/event_created', SubmitEventHandler)
+    ('/event_created', SubmitEventHandler),
+    ('/edit_profile', EditProfileHandler)
 ], debug=True)
