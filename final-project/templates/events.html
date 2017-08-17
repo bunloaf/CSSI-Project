@@ -11,7 +11,7 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyz_eMufP6fT-krchIpNGbKaSJE1T1oxA&callback=initMap">
     </script>
-    <script src='/scripts/map.js'></script>
+    <script src='/scripts/geocode.js'></script>
   </head>
 
   <body>
@@ -52,7 +52,7 @@
         <span class='event_date'>{{ event.event_date }}</span>
         <span class='event_time'>{{ event.event_time }}</span>
         <span class='event_location'>{{ event.event_location }}</span>
-        <input type='submit' id='showInMap' value='Show Map'/>
+        <input type='submit' class='showInMap' value='Show Map'/>
           </br>
         <span class='event_description'>{{ event.event_description }}</span>
       </div>

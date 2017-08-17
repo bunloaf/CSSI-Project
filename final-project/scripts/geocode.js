@@ -1,7 +1,7 @@
 $(document).ready(setUp);
 
 function setUp() {
-  $('#showInMap').click(geocode);
+  $('.showInMap').click(geocode);
 }
 
 function geocode() {
