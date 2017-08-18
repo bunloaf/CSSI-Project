@@ -93,6 +93,12 @@ article {
   left: 400px;
 }
 
+#calendar {
+  position: relative;
+  left: 530px;
+  top: 60px;
+}
+
 input.showInMap {
   background-color: white;
   border-radius: 30%;

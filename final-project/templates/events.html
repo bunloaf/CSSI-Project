@@ -12,6 +12,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyz_eMufP6fT-krchIpNGbKaSJE1T1oxA&callback=initMap">
     </script>
     <script src='/scripts/geocode.js'></script>
+    <script src='/scripts/calendar.js'></script>
   </head>
 
   <body>
@@ -41,6 +42,11 @@
 </br>
 </br>
 </br>
+
+<div id="calendar">
+      <p>Filter events by date:</p>
+      <input type="date" id="date_picker">
+</div>
 
     {% for event in events %}
     <article>
