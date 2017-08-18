@@ -1,10 +1,10 @@
 $(document).ready(setUpCalendar);
 
 function setUpCalendar() {
-  $('#date-picker').on('change', showSearchResults);
+  $('#date_picker').on('change', showSearchResults);
 }
 
 function showSearchResults() {
-  var date = $('#date-picker').val();
-  $('#search-results').html("<p>RESULTS FOR " + date + " GO HERE</p>")
+  var date = $('#date_picker').val();
+  window.location.replace('/events?date=' + date);
 }
