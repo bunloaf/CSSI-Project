@@ -15,4 +15,5 @@ class Profile(ndb.Model):
     gender = ndb.StringProperty()
     orientation = ndb.StringProperty()
     pronouns = ndb.StringProperty()
+    bio = ndb.StringProperty()
     user_id = ndb.StringProperty()

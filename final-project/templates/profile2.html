@@ -4,10 +4,27 @@
     <meta charset="utf-8">
     <title>Profile</title>
     <link rel='stylesheet' href='/styles/profile.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+    rel="stylesheet">
   </head>
   <body>
 
-        <h1><em> YOUR PROFILE </em></h1><br>
+      <div id="main">
+        <div class='head_title'>
+        <h1 id='title'>
+          Lion's Roar
+        </h1>
+          <p>
+            {{ greeting }}
+          </p>
+        </div>
+      </div>
+
+      <div class='title'>
+          <h1 id='side'>
+          H  e  a  r.   U  s.   R  o  a  r.
+          </h1>
+      </div>
 
         <div class='menus'>
           <a href='/'><div class='home_menu'>Home</div></a>
@@ -31,14 +48,14 @@
                 <li id='gh6268'>Orientation: {{profile.orientation}}
                 <li id='gh6268'>Pronouns: {{profile.pronouns}}
               <input type='submit' value='Update'>
-            </form>
-        </div>
+
 
         <p>
           <h2>About lil' ol' me:<br>
-          <textarea rows='6' cols='150'></textarea>
+          <textarea rows='6' cols='150'>{{profile.bio}}</textarea>
 
-
+        </form>
+    </div>
 
   </body>
 </html>

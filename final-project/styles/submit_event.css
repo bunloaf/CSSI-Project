@@ -119,3 +119,57 @@ form {
   position: absolute;
   display: inline-block;
 }
+
+div.line, div.line2, div.line3, div.line4, div.line5, div.line6 {
+  border-left: 10px dotted white;
+  height: 50px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  left: 170px;
+}
+
+div.line2 {
+  opacity: .8;
+}
+
+div.line3 {
+  opacity: .6;
+}
+
+div.line4 {
+  opacity: .4;
+}
+
+div.line5 {
+  opacity: .2;
+}
+
+div.line6 {
+  opacity: .1;
+}
+
+article {
+  background-color: #c42f46;
+  position: relative;
+  border: 1px solid invisible;
+  width: 700px;
+  padding-left: 50px;
+  background: linear-gradient(to left, rgba(184, 165, 174,0), rgba(184, 165, 174,1));
+}
+
+#submit {
+  background-color: #c42f46;
+}
+
+#quotebox {
+  position: relative;
+  border: 1px solid white;
+  top: 250px;
+  left: 875px;
+  width: 150px;
+  height: 285px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}

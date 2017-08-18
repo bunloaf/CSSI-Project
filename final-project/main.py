@@ -77,7 +77,19 @@ class SubmitEventHandler(webapp2.RequestHandler):
 
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
-        profile_template = env.get_template('profile.html')
+        user = users.get_current_user()
+        logout_url = users.create_logout_url('/')
+        login_url = users.create_login_url('/')
+        if user:
+            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+                (user.nickname(), logout_url))
+        else:
+            greeting = ('<a href="%s">Sign in or register</a>' % login_url)
+        vars = {
+            'greeting': greeting,
+                }
+
+        profile_template = env.get_template('profile2.html')
         user = users.get_current_user()
         vars = {
             'name': Profile.name,
@@ -85,21 +97,9 @@ class ProfileHandler(webapp2.RequestHandler):
             'interests': Profile.interests,
             'gender': Profile.gender,
             'orientation': Profile.orientation,
-            'pronouns': Profile.pronouns
+            'pronouns': Profile.pronouns,
+            'bio' : Profile.bio
         }
-        # self.response.write(profile_template.render())
-
-        #
-        # if profile:
-        #     vars = {
-        #         'name': Profile.name,
-        #         'affiliated_group': Profile.affiliated_group,
-        #         'interests': Profile.interests,
-        #         'gender': Profile.gender,
-        #         'orientation': Profile.orientation,
-        #         'pronouns': Profile.pronouns
-        #     }
-        # self.response.write(profile_template.render(vars))
 
 
         profile = Profile.query(Profile.user_id == user.user_id())
@@ -123,6 +123,7 @@ class ProfileHandler(webapp2.RequestHandler):
             gender=self.request.get('gender'),
             orientation=self.request.get('orientation'),
             pronouns=self.request.get('pronouns'),
+            bio=self.request.get('bio'),
             user_id=user_id
         )
         profile.put()
@@ -131,6 +132,15 @@ class ProfileHandler(webapp2.RequestHandler):
 
 class EditProfileHandler(webapp2.RequestHandler):
     def post(self):
+        user = users.get_current_user()
+        logout_url = users.create_logout_url('/')
+        login_url = users.create_login_url('/')
+        if user:
+            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+                (user.nickname(), logout_url))
+        else:
+            greeting = ('<a href="%s">Sign in or register</a>' % login_url)
+
         profile_template = env.get_template('profileedit.html')
         user = users.get_current_user()
         profile = Profile.query(Profile.user_id == user.user_id())
@@ -141,7 +151,8 @@ class EditProfileHandler(webapp2.RequestHandler):
                 'interests': Profile.interests,
                 'gender': Profile.gender,
                 'orientation': Profile.orientation,
-                'pronouns': Profile.pronouns
+                'pronouns': Profile.pronouns,
+                'bio': Profile.bio
             }
         self.response.write(profile_template.render(vars))
 
