@@ -1,25 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 body {
   background-color: #B8A5AE;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #EEE9E9;
 }
 
-a {
-  text-decoration: none;
-  color: #EEE9E9;
-}
-
-h1 {
-  font-size: 30px;
-  text-align: center;
-  white-space: pre;
-}
-
-div.title {
-  display: inline-block;
-  position: fixed;
+div.head_title {
+  position: absolute;
   top: 0px;
-  left: 30px;
+}
+
+#title {
+  font-family: 'Permanent Marker';
+  font-size: 80px;
+  margin: 0;
 }
 
 div.menus {
@@ -30,11 +28,9 @@ div.menus {
   margin-left: 100%;
 }
 
-#map {
-  height: 170px;
-  width: 500px;
-  position: fixed;
-  top: 10px;
+a {
+  text-decoration: none;
+  color: #EEE9E9;
 }
 
 div.home_menu, div.about_menu, div.events_menu,
@@ -60,9 +56,19 @@ div.events_menu {
   border: 1px solid #90182B;
 }
 
+div.events_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
+}
+
 div.submit_event_menu {
   background-color: #061930;
   border: 1px solid #061930;
+}
+
+div.submit_event_menu:hover {
+  transform: scale(.8);
+  transition: ease 1s;
 }
 
 div.profile_menu {
@@ -70,19 +76,12 @@ div.profile_menu {
   border: 1px solid #B8A5AE;
 }
 
-
-/*#a993551 {
-  display: inline-block;
-  position: relative;
-  font-size: 90%;
-  border: none;
-  padding: 10px;
-  background-color: #999994;
-  width: 100%;
-}*/
-
-a {
-  text-decoration: none;
+p {
+  color: #8900f2;
+  font-family: serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
 }
 
 #hj8769 {
