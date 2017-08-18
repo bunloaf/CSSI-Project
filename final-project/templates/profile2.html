@@ -9,7 +9,6 @@
   </head>
   <body>
 
-<<<<<<< HEAD
       <div id="main">
         <div class='head_title'>
         <h1 id='title'>
@@ -26,16 +25,8 @@
           H  e  a  r.   U  s.   R  o  a  r.
           </h1>
       </div>
-=======
-    <div class='head_title'>
-      <h1 id='title'>
-        Lion's Roar
-      </h1>
-        {{ greeting }}
-    </div>
 
         <h1><em> YOUR PROFILE </em></h1><br>
->>>>>>> 54bd832e044d540064c60eb9ae688fd4ffad3e24
 
         <div class='menus'>
           <a href='/'><div class='home_menu'>Home</div></a>
@@ -45,28 +36,27 @@
         </div>
 
 
-          <div id='hd7652'>
-            <img src="http://3.bp.blogspot.com/-uCOOAzMHANo/Tc-Gn4ziU5I/AAAAAAAAA-Y/sn0zOmfISns/s1600/AWESOME%2BFACEBOOK%2BPROFILE%2BPICTURES1.jpg"</img>
-          </div>
+        <div id='hd7652'>
+          <img src="http://3.bp.blogspot.com/-uCOOAzMHANo/Tc-Gn4ziU5I/AAAAAAAAA-Y/sn0zOmfISns/s1600/AWESOME%2BFACEBOOK%2BPROFILE%2BPICTURES1.jpg"</img>
+        </div>
         <div id='jd8765'>
-          <p>
-            <form action='/edit_profile' method='post'>
-              <ul id='wi19874'>
-                <li id='gh6268'>Name: {{profile.name}}
-                <li id='gh6268'>Affiliated Group: {{profile.affiliated_group}}
-                <li id='gh6268'>Interested in: {{profile.interested_in}}
-                <li id='gh6268'>Gender: {{profile.gender}}
-                <li id='gh6268'>Orientation: {{profile.orientation}}
-                <li id='gh6268'>Pronouns: {{profile.pronouns}}
+          <form action='/edit_profile' method='post'>
+            <ul id='wi19874'>
+              <li id='gh6268'>Name: {{profile.name}}
+              <li id='gh6268'>Affiliated Group: {{profile.affiliated_group}}
+              <li id='gh6268'>Interested in: {{profile.interests}}
+              <li id='gh6268'>Gender: {{profile.gender}}
+              <li id='gh6268'>Orientation: {{profile.orientation}}
+              <li id='gh6268'>Pronouns: {{profile.pronouns}}
+              <br>
               <input type='submit' value='Update'>
+          </ul>
 
+          </form>
+        </div>
 
-        <p>
-          <h2>About lil' ol' me:<br>
-          <textarea rows='6' cols='150'>{{profile.bio}}</textarea>
-
-        </form>
-    </div>
+        <h2>About lil' ol' me:<br>
+        <div style="border: 1px solid #90182B; height: 40px">{{profile.bio}}</div>
 
   </body>
 </html>

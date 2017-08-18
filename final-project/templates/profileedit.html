@@ -37,26 +37,31 @@
           <div id='hd7652'>
             <img src="http://3.bp.blogspot.com/-uCOOAzMHANo/Tc-Gn4ziU5I/AAAAAAAAA-Y/sn0zOmfISns/s1600/AWESOME%2BFACEBOOK%2BPROFILE%2BPICTURES1.jpg"</img>
           </div>
-        <div id='jd8765'>
-          <p>
-            <form action='/profile' method='post'>
-              <ul id='wi19874'>
-                <li id='gh6268'>Name:<input type='text' value="{{ name }}"  name='name'>
-                <li id='gh6268'>Affiliated Group:<input type='text' name='affiliated.group'>
-                <li id='gh6268'>Interested in:<input type='text' name='interests'>
-                <li id='gh6268'>Gender:<input type='text' name='gender'>
-                <li id='gh6268'>Orientation:<input type='text' name='orientation'>
-                <li id='gh6268'>Pronouns:<input type='text' name='pronouns'>
-              <input type='submit' value='Update'>
-            </form>
-        </div>
 
-        <p>
-          <form action='/profileedit' method='post'>
-              <h2>About lil' ol' me:<br>
-              <textarea rows='6' cols='150'></textarea>
+          <div id='jd8765'>
+            <form action='/profile' method='post' style:'display: inline;'>
+
+              <ul id='wi19874'>
+
+                <li id='gh6268'>Name:<input type='text' value="{{ name }}"  name='name'>
+                <li id='gh6268'>Affiliated Group:<input type='text'value="{{ affiliated_group }}" name='affiliated_group'>
+                <li id='gh6268'>Interested in:<input type='text' value="{{ interests }}"  name='interests'>
+                <li id='gh6268'>Gender:<input type='text' value="{{ gender }}"  name='gender'>
+                <li id='gh6268'>Orientation:<input type='text' value="{{ orientation }}"  name='orientation'>
+                <li id='gh6268'>Pronouns:<input type='text' value="{{ pronouns }}"  name='pronouns'>
+                <br>
+                <input type='submit' value='Update'>
+              </ul>
+            </form>
+
+          </div>
+
+          <h2>About lil' ol' me:<br>
+          <form action='/profile' method='post' style:'display: inline;'>
+            <textarea rows='6' cols='150' name='bio' value="{{bio}}"></textarea>
             <input type='submit' value='Update'>
-          <form>
+          </form>
+
         </p>
 
 

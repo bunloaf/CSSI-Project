@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 
 body {
   background-color: #0F355A;
@@ -79,13 +80,13 @@ div.profile_menu:hover {
   transition: ease 1s;
 }
 
-p {
+/*p {
   color: #8900f2;
   font-family: serif;
   font-size: 16px;
   letter-spacing: 4px;
   color: white;
-}
+}*/
 
 #newsfeed {
   border: 1px solid #90182B;
@@ -110,8 +111,27 @@ p {
   letter-spacing: 7px;
 }
 
-#calendar {
+/*#calendar {
   position: absolute;
   left: 500px;
   top: 130px;
+}*/
+  /*color: #8900f2;*/
+
+div.quote {
+  font-size: 28px;
+  letter-spacing: 6px;
+  color: white;
+  border: 1px solid;
+  border-top: white ;
+  border-right: invisible ;
+  border-bottom: white ;
+  border-left: invisible;
+  width: 900px;
+  margin-top: 250px;
+  margin-left: 75px;
+  font-family: 'Courgette';
+  text-align: justify;
+  padding-left: 25px;
+  padding-right: 25px;
 }

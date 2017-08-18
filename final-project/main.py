@@ -87,7 +87,8 @@ class ProfileHandler(webapp2.RequestHandler):
             greeting = ('<a href="%s">Sign in or register</a>' % login_url)
         vars = {
             'greeting': greeting,
-                }
+            'profile': {}
+        }
 
         profile_template = env.get_template('profile2.html')
         user = users.get_current_user()
@@ -98,15 +99,28 @@ class ProfileHandler(webapp2.RequestHandler):
             'gender': Profile.gender,
             'orientation': Profile.orientation,
             'pronouns': Profile.pronouns,
-            'bio' : Profile.bio
+            'bio' : Profile.bio or ''
         }
 
 
-        profile = Profile.query(Profile.user_id == user.user_id())
-        if profile:
-            vars = {
-                'profile': profile
+        profile = Profile.query(Profile.user_id == user.user_id()).get()
+        if profile == None:
+            profile = Profile(
+                name=users.get_current_user().nickname(),
+                user_id=user.user_id()
+            )
+            profile.put()
+        vars = {
+            'profile': {
+                'name': profile.name,
+                'affiliated_group': profile.affiliated_group or '',
+                'interests': profile.interests or '',
+                'gender': profile.gender or '',
+                'orientation': profile.orientation or '',
+                'pronouns': profile.pronouns or '',
+                'bio': profile.bio or ''
             }
+        }
         self.response.write(profile_template.render(vars))
 
     def post(self):
@@ -116,16 +130,17 @@ class ProfileHandler(webapp2.RequestHandler):
         profile = Profile.query(Profile.user_id == user.user_id()).get()
 
         user_id = users.get_current_user().user_id()
-        profile = Profile(
-            name=self.request.get('name'),
-            affiliated_group=self.request.get('affiliated_group'),
-            interests=self.request.get('interested_in'),
-            gender=self.request.get('gender'),
-            orientation=self.request.get('orientation'),
-            pronouns=self.request.get('pronouns'),
-            bio=self.request.get('bio'),
-            user_id=user_id
-        )
+
+        profile.name = self.request.get('name') or profile.name
+        profile.affiliated_group = self.request.get('affiliated_group') or profile.affiliated_group
+        profile.interests = self.request.get('interests') or profile.interests
+        profile.gender = self.request.get('gender') or profile.gender
+        profile.orientation = self.request.get('orientation') or profile.orientation
+        profile.pronouns = self.request.get('pronouns') or profile.pronouns
+
+        profile.bio = self.request.get('bio') or profile.bio
+
+
         profile.put()
 
         self.response.write(profile_template.render({'profile': profile}))
@@ -143,17 +158,16 @@ class EditProfileHandler(webapp2.RequestHandler):
 
         profile_template = env.get_template('profileedit.html')
         user = users.get_current_user()
-        profile = Profile.query(Profile.user_id == user.user_id())
-        if profile:
-            vars = {
-                'name': Profile.name,
-                'affiliated_group': Profile.affiliated_group,
-                'interests': Profile.interests,
-                'gender': Profile.gender,
-                'orientation': Profile.orientation,
-                'pronouns': Profile.pronouns,
-                'bio': Profile.bio
-            }
+        profile = Profile.query(Profile.user_id == user.user_id()).get()
+        vars = {
+            'name': profile.name,
+            'affiliated_group': profile.affiliated_group or '',
+            'interests': profile.interests or '',
+            'gender': profile.gender or '',
+            'orientation': profile.orientation or '',
+            'pronouns': profile.pronouns or '',
+            'bio': profile.bio or ''
+        }
         self.response.write(profile_template.render(vars))
 
 

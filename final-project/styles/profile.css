@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
->>>>>>> 54bd832e044d540064c60eb9ae688fd4ffad3e24
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 body {
@@ -13,7 +7,6 @@ body {
 }
 
 div.head_title {
-<<<<<<< HEAD
   position: relative;
   top: 0px;
 }
@@ -32,16 +25,6 @@ div.title {
   position: fixed;
   bottom: 0px;
   left: 30px;
-=======
-  position: absolute;
-  top: 0px;
-}
-
-#title {
-  font-family: 'Permanent Marker';
-  font-size: 80px;
-  margin: 0;
->>>>>>> 54bd832e044d540064c60eb9ae688fd4ffad3e24
 }
 
 div.menus {
@@ -53,16 +36,7 @@ div.menus {
   font-family: 'Open Sans Condensed';
 }
 
-<<<<<<< HEAD
 div.home_menu, div.events_menu,
-=======
-a {
-  text-decoration: none;
-  color: #EEE9E9;
-}
-
-div.home_menu, div.about_menu, div.events_menu,
->>>>>>> 54bd832e044d540064c60eb9ae688fd4ffad3e24
 div.submit_event_menu, div.profile_menu {
   display: inline-block;
   height:100px;
@@ -111,37 +85,6 @@ div.profile_menu {
   border: 1px solid #B8A5AE;
 }
 
-<<<<<<< HEAD
-=======
-p {
-  color: #8900f2;
-  font-family: serif;
-  font-size: 16px;
-  letter-spacing: 4px;
-  color: white;
-}
-
-#hj8769 {
-  border: 1px solid black;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  display: inline-block;
-  list-style: none;
-  background-color: white
-}
-
-h1 {
-  border: 0;
-  display: inline;
-  color: #aaf237;
-  font-size: 36px;
-  font-weight: 100;
-  font-family: dosif;
-
-}
-
->>>>>>> 54bd832e044d540064c60eb9ae688fd4ffad3e24
 p {
   color: #8900f2;
   font-family: 'Open Sans Condensed';
